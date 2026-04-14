@@ -1,0 +1,205 @@
+
+  /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222; /* Darker background */
+    color: #f1f1f1; /* Light text color for contrast */
+    transition: background-color 0.3s ease;
+  }
+  
+  h1, h2 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header Section */
+  header {
+    background: linear-gradient(45deg, #007bff, #28a745); /* Professional gradient */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #ddd;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav .nav-link {
+    background: #28a745; /* Professional green */
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  }
+  
+  nav .nav-link:hover {
+    background: #218838; /* Darker green on hover */
+    transform: scale(1.1);
+    color: #fff; /* Text color change */
+  }
+  
+  .theme-toggle {
+    background-color: #007bff; /* Professional blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1);
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-toggle:hover {
+    transform: rotate(90deg); /* Rotate the hamburger icon on hover */
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 0;
+    background-color: #333; /* Darker background for sections */
+    color: #f1f1f1; /* Light text for better readability */
+    text-align: center;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    color: #007bff; /* Blue for section headings */
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  ul li:hover {
+    transform: translateX(10px); /* Slide effect on hover */
+    color: #28a745; /* Change text color to green */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  
+    nav.active {
+      display: block;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul li {
+      margin: 15px 0;
+    }
+  
+    nav.active ul {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    .theme-toggle, .nav-link {
+      font-size: 16px;
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Dark Theme */
+  body.dark-theme {
+    background-color: #222;
+    color: #f1f1f1;
+  }
+  
+  body.dark-theme header {
+    background: linear-gradient(45deg, #28a745, #007bff);
+  }
+  
+  body.dark-theme nav .nav-link {
+    background: #218838;
+  }
+  
+  body.dark-theme .theme-toggle {
+    background-color: #0056b3;
+  }
+  
